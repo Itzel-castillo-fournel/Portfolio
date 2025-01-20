@@ -136,3 +136,57 @@
     height: auto; /* Maintient le ratio */
     margin: 10px; 
 }
+
+#certifs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+.vignette-certifs {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+.vignette-certifs img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.vignette-certifs .content-certifs {
+    padding: 15px;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.vignette-certifs .content-certifs h2 {
+    margin: 0 0 10px;
+    font-size: 1.3em;
+}
+
+.vignette-certifs .content-certifs p {
+    margin: 5px 0;
+}
+
+.vignette-certifs .content-certifs .link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.vignette-certifs:hover {
+    transform: scale(1.05);
+}
