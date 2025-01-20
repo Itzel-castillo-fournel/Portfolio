@@ -1,0 +1,135 @@
+/* Style pour les onglets */
+.tabs {
+    overflow: hidden; 
+    background-color: transparent; 
+    margin-bottom: 20px; 
+}
+
+.tablink {
+    background-color: transparent; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    padding: 14px 16px; 
+    cursor: pointer; 
+    float: left; 
+    border: none; /* Aucune bordure */
+    outline: none; /* Pas de contour */
+    font-size: 17px; 
+}
+
+
+/* Style pour le contenu des onglets */
+
+.container {
+    display: flex; 
+    flex-wrap: wrap; /* Permet le retour à la ligne des éléments */
+    gap: 20px; 
+}
+
+.vignette {
+    width: 200px; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    border-radius: 5px; /* Coins arrondis */
+    text-align: center; 
+    cursor: pointer; 
+}
+
+.vignette img {
+    width: 100%; /* Largeur de 100% du conteneur */
+    height: auto; /* Hauteur auto pour conserver les proportions */
+}
+
+
+.popup {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Position fixe */
+    top: 50%; 
+    left: 50%; 
+    width: 80%; 
+    height: 80%; 
+    transform: translate(-50%, -50%); /* Centre la popup */
+    background-color: #333; 
+    color: white; 
+    padding: 20px; 
+    box-sizing: border-box; /* Inclut le padding et la bordure dans les dimensions totales */
+    border: 2px solid #ccc; 
+    z-index: 1002; /* Niveau de superposition élevé */
+    overflow: hidden; 
+    border-radius: 10px; 
+}
+
+.popup .close {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    font-size: 24px; 
+    cursor: pointer; 
+}
+
+.overlay {
+    display: none; /* Caché par défaut */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+    backdrop-filter: blur(5px); /* Floute le fond */
+    z-index: 1001; /* Niveau de superposition moyen */
+}
+
+.docuProjet {
+    margin-top: 100px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end; 
+    gap: 10px; 
+    width: 100%; 
+    overflow: hidden; 
+}
+
+.imageProjet {
+    width: 100px; 
+    height: 100px; 
+    cursor: pointer; 
+    z-index: 1001; 
+}
+
+.imageProjet.expanded { 
+    width: 90%; 
+    height: auto; 
+    max-height: 90%; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1003; 
+} 
+
+.categorie{
+    background-color: transparent; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; /
+}
+
+.project-goal{
+    text-align: left; 
+    line-height: 2; /* Interligne*/
+}
+
+.iconProj { 
+    display: inline-block; /* Affichage en ligne */
+    vertical-align: middle; /* Aligne verticalement au milieu */ 
+    text-align: left; /* Alignement du texte à gauche */
+} 
+
+.iconProj img { 
+    width: 25px; 
+    height: auto; 
+    vertical-align: left; 
+    margin-left: 10px; 
+}
+

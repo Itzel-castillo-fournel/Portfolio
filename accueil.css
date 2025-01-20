@@ -1,0 +1,138 @@
+#contact {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contact img {
+    width: 40px;
+    margin: 0 10px;
+}
+
+.content {
+    display: flex;
+    height: calc(100vh - 80px); /* Ajuste taille */
+}
+
+.left {
+    width: 50%;
+    padding: 50px;
+    margin-top: 150px;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.robot {
+    width: 80%; 
+    max-height: 100%;
+}
+
+#mooc-container {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 27%; /* Position image sur écran robot*/
+    left: 27%; /* Position image sur écran robot*/
+    overflow: hidden;
+}
+
+.carousel {
+    max-width: 300px; 
+    margin: 20px auto; 
+}
+
+.carousel-img {
+    width: 60px; 
+    height: auto; 
+    object-fit: contain;
+}
+
+.mytimeline {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+
+.timeline {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.year {
+    font-weight: bold;
+    width: 10%;
+}
+
+.year:hover{
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+
+.contentime {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 500px;
+    z-index: 10;
+    text-align: left;
+}
+
+.contentime::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 5px; 
+    border: 2px solid transparent; 
+    background: linear-gradient(to right, #AE8625, #EDC967); 
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    z-index: -1; 
+}
+
+.timeline:hover .contentime {
+    display: block;
+}
+
+.education-section {
+    width: 90%;
+    height: 300px;
+}
+
+
+.skill-section p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; 
+    margin-top: 30px;
+}
+
+.skill {
+    font-weight: bold;
+    margin-right: 20px; 
+}
+
+.skill-logo {
+    width: 100px; /* Définit la même taille pour toutes les images */
+    height: auto; /* Maintient le ratio */
+    margin: 10px; 
+}

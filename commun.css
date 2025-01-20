@@ -1,0 +1,122 @@
+header {
+    position: fixed; /* Positionne le header par rapport à la fenêtre du navigateur */
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 10vh; 
+    background-color: black; 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    margin-bottom: 50px; 
+    z-index: 10; /* Assure que le header se trouve au-dessus des autres éléments */
+}
+
+header a {
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); /* Applique un dégradé radial au texte */
+    -webkit-background-clip: text; /* Utilise le dégradé uniquement pour le texte */
+    -webkit-text-fill-color: transparent; /* Remplit le texte avec le dégradé */
+    padding: 14px 16px; 
+    text-decoration: none; 
+    font-size: 20px; 
+}
+
+
+header::after {
+    content: ''; /* Ajoute un contenu vide pour le pseudo-élément */
+    position: absolute; /* Positionne le pseudo-élément par rapport au header */
+    bottom: 0; /* Place le pseudo-élément en bas du header */
+    left: 0; 
+    width: 100%; /* Le pseudo-élément prend toute la largeur du header */
+    height: 2px; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); /* Ligne dorée sous le menu */
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #000; 
+    color: #fff; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding-top: 5%; 
+}
+
+body h1 {
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+body h2 {
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    text-align: center;
+}
+
+body h3 {
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    text-align: center; 
+}
+
+section {
+    margin: 0; 
+    padding: 0;
+}
+
+.full-page {
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+}
+
+
+footer {
+    position: relative; /* Positionne par rapport à la fenêtre du navigateur */
+    width: 100%; 
+    background-color: black; 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 10; /* Assure que les éléments se trouvent au-dessus des autres */
+    margin-top: 50px;
+    bottom: 0px;
+}
+
+
+footer {
+    bottom: 0;
+    height: 8vh;
+}
+
+footer a {
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); /* Applique un dégradé radial au texte */
+    -webkit-background-clip: text; /* Utilise le dégradé uniquement pour le texte */
+    -webkit-text-fill-color: transparent; /* Remplit le texte avec le dégradé */
+    padding: 14px 16px; 
+    text-decoration: none; 
+    font-size: 15px; 
+}
+
+footer::before {
+    content: ''; /* Ajoute un contenu vide pour le pseudo-élément */
+    position: absolute; /* Positionne le pseudo-élément par rapport à l'élément principal */
+    top: 0; /* Place le pseudo-élément en haut du footer */
+    left: 0; 
+    width: 100%; /* Le pseudo-élément prend toute la largeur de l'élément principal */
+    height: 2px; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); /* Ligne dorée sous ou au-dessus du menu */
+}
+
+        

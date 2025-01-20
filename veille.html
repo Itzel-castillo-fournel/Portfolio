@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Informatique</title>
+    <link rel="stylesheet" href="veille.css">
+    <link rel="stylesheet" href="commun.css">
+</head>
+
+<header id="menu">
+<a href="accueil.html">Accueil</a>
+<a href="entreprise.html">Entreprise</a>
+<a href="projet.html">Projets</a>
+<a href="veille.html">Veille</a>
+<a href="bilan.html">Bilan</a>
+</header>
+
+<body>
+    <h1>Veille Informatique</h1>
+    <h2>Sujet: Les avancées récentes de l'Intelligence Artificielle dans la détection des menaces et la prévention des cyberattaques</h2>
+    <br><br> <!--Saut de ligne-->
+
+    <div id="explication">
+        <h2>Pourquoi ce sujet ?</h2>
+        <p>Les avancées en Intelligence Artificielle sont au cœur des discussions actuelles en matière de cybersécurité. En effet l'IA joue un rôle de plus en plus crucial dans la détection des menaces et la prévention des cyberattaques. Il est donc important de se tenir au courant des dernières actualités sur le sujet d'autant plus que je souhaites m'orienter vers la cybersécurité dans la poursuite de mes études.</p>
+    </div>
+
+    <div id="article">
+        <h2>Mes articles</h2>
+
+        <!-- Filtres pour trier les articles -->
+        <div class="filters">
+            <button onclick="sortBy('date')">Trier par Date</button>
+            <button onclick="sortBy('rating')">Trier par Note</button>
+        </div>
+
+        <div class="container">
+            <div class="vignette" data-date="2023-09-19" data-rating="4.0">
+                <img src="images/forbes.png" alt="Image main de robot">
+                <div class="content">
+                    <h2>Using AI In Cybersecurity: Exploring The Advantages And Risks</h2>
+                    <p class="date">Date: 19/09/2023</p>
+                    <p class="author">Auteur: Bartosz Skwarczek</p>
+                    <p class="source">Source: Forbes Technology Council</p>
+                    <p class="rating">Note: 4/5</p>
+                </div>
+                <div class="overlay">
+                    <p>L'article fournit une réponse complète et structurée sur l'utilisation de l'IA dans la cybersécurité, en exposant à la fois les avancées et les défis. Toutefois, il pourrait approfondir certains risques liés à l'IA et inclure des exemples concrets d'applications.</p>
+                    <a href="https://www.forbes.com/sites/forbestechcouncil/2023/09/18/using-ai-in-cybersecurity-exploring-the-advantages-and-risks/" class="link">Lire l'article</a>
+                </div>
+            </div>
+            
+            <div class="vignette" data-date="2023-11-14" data-rating="3.0">
+                <img src="images/article2.png" alt="Image prompt: A photo realistic black and white image of Alan Turing witnessing artificial intelligence become a vivid colourful reality in the background.">
+                <div class="content">
+                    <h2>NCSC Annual Review 2023 : Cyber security opportunities of AI</h2>
+                    <p class="date">Date: 14/11/2023</p>
+                    <p class="author">Auteur: NCSC</p>
+                    <p class="source">Source: NCSC</p>
+                    <p class="rating">Note: 3/5</p>
+                </div>
+                <div class="overlay">
+                    <p>L'article souligne les opportunités que l'IA offre dans le domaine de la cybersécurité, en se concentrant sur sa capacité à détecter les menaces et à prévenir les cyberattaques. L'IA est utilisée pour améliorer la détection des attaques en reconnaissant les emails malveillants et en regroupant les campagnes de phishing. Elle peut également analyser les journaux et le trafic réseau, soutenir le développement de code sécurisé, et aider à repérer des vulnérabilités dans le code source. Bien que ces avancées soient prometteuses, l'article insiste sur la nécessité de diversifiée les sources de l'IA pour éviter d'introduire des biais dans les analyses de cybersécurité.</p>
+                    <a href="https://www.ncsc.gov.uk/collection/annual-review-2023/technology/case-study-cyber-security-ai#section_4" class="link">Lire l'article</a>
+                </div>
+            </div>
+            
+            <div class="vignette" data-date="2024-03-13" data-rating="5.0">
+                <img src="images/article3.png" alt="Image d'une femme sur son ordinateur">
+                <div class="content">
+                    <h2>AI and Cybersecurity: Benefits and Threats</h2>
+                    <p class="date">Date: 13/03/2024</p>
+                    <p class="author">Auteur: John Meah</p>
+                    <p class="source">Source: Techopedia</p>
+                    <p class="rating">Note: 5/5</p>
+                </div>
+                <div class="overlay">
+                    <p>L'article explore les avantages et les défis de l'utilisation de l'IA dans la cybersécurité. Il met en avant comment l'IA peut améliorer la détection des menaces, automatiser les réponses aux incidents et analyser de grands volumes de données pour identifier des anomalies. Cependant, il souligne également les risques potentiels, tels que l'utilisation de l'IA par des acteurs malveillants pour lancer des attaques plus sophistiquées et les préoccupations liées à la vie privée et à la transparence des données.</p>
+                    <a href="https://www.techopedia.com/ai-and-cybersecurity-benefits-and-threats" class="link">Lire l'article</a>
+                </div>
+            </div>
+
+            <div class="vignette" data-date="2024-07-04" data-rating="5.0">
+                <img src="images/article4.png" alt="Image d'un homme sur son ordinateur">
+                <div class="content">
+                    <h2>L'IA en cybersécurité : stratégies avancées et défenses renforcées</h2>
+                    <p class="date">Date: 04/07/2024</p>
+                    <p class="author">Auteur: Apside</p>
+                    <p class="source">Source: Apside</p>
+                    <p class="rating">Note: 5/5</p>
+                </div>
+                <div class="overlay">
+                    <p>Cet article explore comment l'IA transforme les stratégies de cybersécurité et renforce les défenses des entreprises. Il met en avant l'analyse des comportements anormaux comme l'une des contributions les plus significatives de l'IA à la cybersécurité. Les techniques de machine learning permettent également d'apprendre et de comprendre ce qui constitue un comportement normal permettant de détectée et signalée toute activité déviante. L'article aborde également la détection des malwares et des virus.</p>
+                    <a href="https://www.apside.com/fr/blog/lia-en-cybersecurite-strategies-avancees-et-defenses-renforcees/?form=MG0AV3" class="link">Lire l'article</a>
+                </div>
+            </div>
+
+            <div class="vignette" data-date="2024-11-12" data-rating="4.0">
+                <img src="images/article5.png" alt="Image de code">
+                <div class="content">
+                    <h2>Avancée historique en cybersécurité grâce à Google</h2>
+                    <p class="date">Date: 12/11/2024</p>
+                    <p class="author">Auteur: Martin Berthiaume</p>
+                    <p class="source">Source: Les affaires</p>
+                    <p class="rating">Note: 4/5</p>
+                </div>
+                <div class="overlay">
+                    <p>Cet article met en lumière une avancée majeure réalisée par Google dans le domaine de la cybersécurité grâce à son outil basé sur l'Intelligence Artificielle appelé Big Sleep. Ce modèle de langage avancé a permis de découvrir une vulnérabilité zéro-day dans le moteur de base de données SQLite, une technologie open source largement utilisée. L'article souligne l'importance de cette percée pour la cybersécurité défensive, tout en évoquant les préoccupations liées à l'utilisation de telles technologies par des acteurs malveillants.</p>
+                    <a href="https://www.lesaffaires.com/dossiers/cybersecurite-miser-sur-lhumain/avancee-historique-en-cybersecurite-grace-a-google/#:~:text=Le%203%20novembre%2C%20Google%20a%20annonc%C3%A9%20une%20avanc%C3%A9e,donn%C3%A9es%20SQLite%2C%20une%20technologie%20%C2%ABopen%20source%C2%BB%20tr%C3%A8s%20utilis%C3%A9e." class="link">Lire l'article</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="outils">
+        <h2>Outils utilisés</h2>
+        <img id = "logo" src="images/feedly.png" alt="Logo de feedly">
+        <img src="images/google.png" alt="Logo de google alert">
+    </div>
+
+    <script src="veille.js"></script>
+</body>
+<footer>
+    <a href="mentions.html">Mentions Légales</a>
+</footer>
+</html>

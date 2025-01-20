@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Projet</title>
+    <link rel="stylesheet" href="projet.css">
+    <link rel="stylesheet" href="commun.css">
+</head>
+
+<header id="menu">
+    <a href="accueil.html">Accueil</a>
+    <a href="entreprise.html">Entreprise</a>
+    <a href="projet.html">Projets</a>
+    <a href="veille.html">Veille</a>
+    <a href="bilan.html">Bilan</a>
+</header>
+
+<body>
+    <h1>Mes Projets</h1>
+    <div class="tabs">
+        <button class="tablink" onclick="filterProjects('Tous')">Tous</button>
+        <button class="tablink" onclick="filterProjects('2023-2024')">Projet 2023-2024</button>
+        <button class="tablink" onclick="filterProjects('2024-2025')">Projet 2024-2025</button>
+        <button class="tablink" onclick="filterProjects('Ecole')">Projets école</button>
+    </div>
+
+    <div class="container">
+        <div class="vignette 2023-2024" onclick="showPopup('project1')">
+            <h3>Macro Kénora</h3>
+            <img src="images/projet1.png" alt="Image robot">
+            <p class="vign"><span class="iconProj"><img src="images/horloge.jpg" alt="Durée"></span> 6 mois <span class="iconProj"><img src="images/bonhomme.jpg" alt="Personnes impliquées"></span> 4</p> 
+        </div>
+        <div class="vignette 2023-2024" onclick="showPopup('project4')">
+            <h3>Tickets</h3>
+            <img src="images/project4.jpg" alt="Image service de support utilisateur">
+            <p class="vign"><span class="iconProj"><img src="images/horloge.jpg" alt="Durée"></span> En cours <span class="iconProj"><img src="images/bonhomme.jpg" alt="Personnes impliquées"></span> 1</p> 
+        </div>
+        <div class="vignette 2024-2025" onclick="showPopup('project2')">  
+            <h3>Gestion d'avenants</h3>
+            <img src="images/Avenant.jpg" alt="Projet 2">
+            <p class="vign"><span class="iconProj"><img src="images/horloge.jpg" alt="Durée"></span> 6 mois <span class="iconProj"><img src="images/bonhomme.jpg" alt="Personnes impliquées"></span> 4</p> 
+        </div>
+        <div class="vignette Ecole" onclick="showPopup('project3')">
+            <h3>Text Adventure</h3>
+            <img src="images/project3.png" alt="Image d'un ordinateur avec un jeu vidéo sur l'écran">
+            <p class="vign"><span class="iconProj"><img src="images/horloge.jpg" alt="Durée"></span> 1 mois <span class="iconProj"><img src="images/bonhomme.jpg" alt="Personnes impliquées"></span> 1</p> 
+        </div>
+        <div class="vignette Ecole" onclick="showPopup('project5')">
+            <h3>Billeterie</h3>
+            <img src="images/project5.jpg" alt="Image billeterie">
+            <p class="vign"><span class="iconProj"><img src="images/horloge.jpg" alt="Durée"></span> 2 semaines <span class="iconProj"><img src="images/bonhomme.jpg" alt="Personnes impliquées"></span> 1</p> 
+        </div>
+        <!-- Ajout vignettes ici -->
+    </div>
+
+
+
+    <div id="project1" class="popup">
+        <span class="close" onclick="hidePopup('project1')">&times;</span> <!-- &times; = croix pour fermer -->
+        <h2>Macro Kénora</h2><br>
+        <div class="project-goal">
+            <p><strong class="categorie">Objectif :</strong> Consolider les données extraites de plusieurs fichiers du logiciel Kénora dans une base de données unique, facilitant l'analyse et la rédaction de rapports.</p> 
+            <p><strong class="categorie">Mon rôle :</strong> Développement d'une macro en VBA pour concaténer les fichiers, détecter et traiter les doublons, et assurer la cohérence des données exportées.</p> 
+            <p><strong class="categorie">Compétences mobilisées :</strong> Programmation en VBA, manipulation avancée de fichiers, contrôle de cohérence des données, utilisation de structures de boucles.</p> 
+            <p><strong class="categorie">Ce que j'en retire :</strong> Acquisition de compétences en programmation VBA et maîtrise plus approfondie des structures de boucles.</p>
+        </div>
+        <div class="docuProjet">
+            <img class="imageProjet" src="images/Kenora1.png" alt="Image mode d'emploi">
+            <img class="imageProjet" src="images/Kenora2.png" alt="Image morceau de code"> 
+            <img class="imageProjet" src="images/Kenora3.png" alt="Image mail"> 
+        </div>
+    </div>
+
+    <div id="project2" class="popup">
+        <span class="close" onclick="hidePopup('project2')">&times;</span><br>
+        <h2>Gestion des avenants chef d'équipe</h2>
+        <div class="project-goal">
+            <p><strong class="categorie">Objectif :</strong> Centraliser la saisie des avenants chef d'équipe dans le logiciel Pléiades pour éviter les saisies multiples.</p> 
+            <p><strong class="categorie">Mon rôle :</strong> Développer la fonctionnalité dans Pléiades et mettre en place un BO pour l'édition de l'avenant</p> 
+            <p><strong class="categorie">Compétences mobilisées :</strong> Programmation orientée objet, gestion des niveaux de confidentialité, utilisation d'une station de modélisation.</p> 
+            <p><strong class="categorie">Ce que j'en retire :</strong> Développement de compétences en gestion de projet en en amélioration des processus de travail.</p>
+        </div>
+        <div class="docuProjet">
+            <img class="imageProjet" src="images/Avenant1.png" alt="Image transaction avenant">
+            <img class="imageProjet" src="images/Avenant2.png" alt="Image morceau de code"> 
+        </div>
+    </div>
+
+    <div id="project3" class="popup">
+        <span class="close" onclick="hidePopup('project3')">&times;</span><br>
+        <h2>Text Adventure</h2>
+        <div class="project-goal">
+            <p><strong class="categorie">Objectif :</strong> Créer un prototype de jeu textuel interactif.</p> 
+            <p><strong class="categorie">Mon rôle :</strong> Développeuse et scénariste, en charge du code et des dialogues </p> 
+            <p><strong class="categorie">Compétences mobilisées :</strong> Programmation en Python et créativité dans les dialogues et actions.</p> 
+            <p><strong class="categorie">Ce que j'en retire :</strong> Amélioration de mes compétences en programmation et en gestion de projet.</p>
+        </div>
+        <div class="docuProjet">
+            <img class="imageProjet" src="images/Textadventure1.png" alt="Image morceau de code">
+            <img class="imageProjet" src="images/Textadventure2.png" alt="Image morceau de code"> 
+        </div>
+    </div>
+
+    <div id="project4" class="popup">
+        <span class="close" onclick="hidePopup('project4')">&times;</span><br>
+        <h2>Tickets</h2>
+        <div class="project-goal">
+            <p><strong class="categorie">Objectif :</strong> Automatiser et centraliser la gestion des tickets utilisateur pour améliorer l'efficacité et la traçabilité des demandes.</p> 
+            <p><strong class="categorie">Mon rôle :</strong> Répondre aux tickets utilisateur en assurant un support rapide et efficace.</p> 
+            <p><strong class="categorie">Compétences mobilisées :</strong> Analyse des demandes utilisateur, résolution de problèmes techniques et gestion des priorités.</p> 
+            <p><strong class="categorie">Ce que j'en retire :</strong> Amélioration de mes compétences en support utilisateur et de ma capacité à résoudre des problèmes techniques</p>
+        </div>
+        <div class="docuProjet">
+            <img class="imageProjet" src="images/Ticket1.png" alt="Image ticket mantis"> 
+            <img class="imageProjet" src="images/Ticket2.png" alt="Image morceau de code"> 
+            <img class="imageProjet" src="images/Ticket3.png" alt="Image tableau de gestion de projet"> 
+        </div>
+    </div>
+
+    <div id="project5" class="popup">
+        <span class="close" onclick="hidePopup('project5')">&times;</span><br>
+        <h2>Billeterie</h2>
+        <div class="project-goal">
+            <p><strong class="categorie">Objectif :</strong> Calculer le tarif des billets de métro selon des règles tarifaires.</p> 
+            <p><strong class="categorie">Mon rôle :</strong> Développeur principal en charge de la conception et de l'implémentation du système de billetterie.</p> 
+            <p><strong class="categorie">Compétences mobilisées :</strong> Programmation en Python, gestion des entrées utilisateurs et manipulation des données.</p> 
+            <p><strong class="categorie">Ce que j'en retire :</strong> Amélioration de mes compétences en programmation et en gestion de projet.</p>
+        </div>
+        <div class="docuProjet">
+            <img class="imageProjet" src="images/Billeterie1.png" alt="Image morceau de code"> 
+            <img class="imageProjet" src="images/Billeterie2.png" alt="Image morceau de code"> 
+        </div>
+    </div>
+
+    <div class="overlay" onclick="hideAllPopups()"></div>
+
+    <script src="projet.js"></script>
+</body>
+<footer>
+    <a href="mentions.html">Mentions Légales</a>
+</footer>
+</html>
