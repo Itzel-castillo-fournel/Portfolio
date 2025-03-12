@@ -48,8 +48,8 @@
         </div>
         <div class="vignette Ecole" onclick="showPopup('project5')">
             <h3>RailTrip</h3>
-            <img src="images/project5.jpg" alt="Image billeterie">
-            <p class="vign"><span class="iconProj"><img src="images/horloge.jpg" alt="Durée"></span> 2 semaines <span class="iconProj"><img src="images/bonhomme.jpg" alt="Personnes impliquées"></span> 1</p> 
+            <img src="images/train.png" alt="Image Train">
+            <p class="vign"><span class="iconProj"><img src="images/horloge.jpg" alt="Durée"></span> 4 mois <span class="iconProj"><img src="images/bonhomme.jpg" alt="Personnes impliquées"></span> 4</p> 
         </div>
         <!-- Ajout vignettes ici -->
     </div>
@@ -165,7 +165,7 @@
                             <strong>Phase 2 (7 mois)</strong>: Développement de la fonctionnalité dans Pléiades
                         </div>
                         <div class="timeline-item">
-                            <strong>Phase 3 (1 mois)</strong>: Implémentation du back-office pour l'édition des avenants et tests
+                            <strong>Phase 3 (1 mois)</strong>: Mise en production du développement et correction des bugs
                         </div>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                         <span class="tool-tag">Pléiades</span>
                         <span class="tool-tag">Station de modélisation</span>
                         <span class="tool-tag">NGScript</span>
-                        <span class="tool-tag">BI</span>
+                        <span class="tool-tag">Webi BI</span>
                     </div>
                 </div>
     
@@ -209,11 +209,19 @@
                         </li>
                         <li class="doc-item">
                             <img src="images/pdf-icon.png" alt="PDF" class="doc-icon">
+                            <a href="images/AvenantScenario.pdf">Scénarios</a>
+                        </li>
+                        <li class="doc-item">
+                            <img src="images/pdf-icon.png" alt="PDF" class="doc-icon">
                             <a href="images/NoteExplicativeAvenant.pdf">Note explicative du développement</a>
                         </li>
                         <li class="doc-item">
                             <img src="images/pdf-icon.png" alt="PDF" class="doc-icon">
-                            <a href="docs/tech-doc-avenant.pdf">Documentation technique</a>
+                            <a href="images/TestAvenant.pdf">Compte rendu des tests</a>
+                        </li>
+                        <li class="doc-item">
+                            <img src="images/pdf-icon.png" alt="PDF" class="doc-icon">
+                            <a href="images/GuideUtilisateurAvenant.pdf">Guide utilisateur</a>
                         </li>
                     </ul>
                 </div>
@@ -228,6 +236,10 @@
                         <figure>
                             <img class="imageProjet" src="images/Avenant2.png" alt="Exemple de code">
                             <figcaption>Extrait de code</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="imageProjet" src="images/Avenant3.png" alt="Demande d'évolution">
+                            <figcaption>Demande d'évolution</figcaption>
                         </figure>
                     </div>
                 </div>
@@ -400,26 +412,26 @@
 
     <div id="project5" class="popup">
         <span class="close" onclick="hidePopup('project5')">&times;</span>
-        <h2>Billeterie</h2>
+        <h2>RailTrip</h2>
         
         <div class="popup-content">
             <div class="popup-main">
                 <div class="project-section">
                     <h3>Description détaillée</h3>
-                    <p>Le projet Billeterie est une application développée pour calculer automatiquement les tarifs des billets de métro selon diverses règles tarifaires complexes. Cette solution simplifie le processus d'achat pour les utilisateurs tout en assurant l'application correcte des différentes politiques de tarification.</p>
+                    <p>L'application RailTrip propose une nouvelle vision du concept traditionnel du roadtrip en le réinventant à travers le voyage en train. Cette solution permet aux utilisateurs de consulter les horaires des trains en temps réel, avec différents niveaux de fonctionnalités. Le projet a été développé avec une attention particulière à l'expérience utilisateur grâce à une charte graphique soignée utilisant des couleurs chaudes et une typographie moderne, créant ainsi une interface à la fois dynamique et accueillante.</p>
                 </div>
     
                 <div class="project-section">
                     <h3>Chronologie du projet</h3>
                     <div class="timeline">
                         <div class="timeline-item">
-                            <strong>Phase 1 (3 jours)</strong>: Analyse des règles tarifaires et conception
+                            <strong>Phase 1 (1 mois)</strong>: Définition du projet, rédaction du cahier des charges et élaboration de la charte graphique
                         </div>
                         <div class="timeline-item">
-                            <strong>Phase 2 (1 semaine)</strong>: Développement du moteur de calcul en Python
+                            <strong>Phase 2 (2 mois)</strong>: Développement de l'application backend et frontend
                         </div>
                         <div class="timeline-item">
-                            <strong>Phase 3 (4 jours)</strong>: Tests et validation
+                            <strong>Phase 2 (1 mois)</strong>: Tests, déploiement et corrections
                         </div>
                     </div>
                 </div>
@@ -428,19 +440,19 @@
                     <h3>Fonctionnalités clés</h3>
                     <div class="features-grid">
                         <div class="feature-item">
-                            <p>Calcul automatique des tarifs selon différents critères</p>
+                            <p>Consultation des horaires de train en temps réel</p>
                         </div>
                         <div class="feature-item">
-                            <p>Gestion des réductions et des forfaits</p>
+                            <p>Recherche de trajets simples pour les utilisateurs non connectés</p>
                         </div>
                         <div class="feature-item">
-                            <p>Interface utilisateur simple et efficace</p>
+                            <p>Gestion des roadtrips (publics/privés, favoris, suppression)</p>
                         </div>
                         <div class="feature-item">
-                            <p>Validation des entrées utilisateur</p>
+                            <p>Filtrage des roadtrips par durée ou ville de départ</p>
                         </div>
                         <div class="feature-item">
-                            <p>Génération de reçus détaillés</p>
+                            <p>Interface responsive adaptée à tous les appareils</p>
                         </div>
                     </div>
                 </div>
@@ -451,8 +463,13 @@
                     <h3>Outils et technologies</h3>
                     <div class="tools-list">
                         <span class="tool-tag">Python</span>
+                        <span class="tool-tag">Django</span>
                         <span class="tool-tag">Visual Studio Code</span>
                         <span class="tool-tag">GitHub</span>
+                        <span class="tool-tag">Atlassian/Jira</span>
+                        <span class="tool-tag">API SNCF</span>
+                        <span class="tool-tag">HTML/CSS</span>
+                        <span class="tool-tag">Figma</span>
                     </div>
                 </div>
     
@@ -461,15 +478,15 @@
                     <ul class="doc-list">
                         <li class="doc-item">
                             <img src="images/pdf-icon.png" alt="PDF" class="doc-icon">
-                            <a href="docs/regles-tarifaires.pdf">Spécifications des règles tarifaires</a>
+                            <a href="images/RailTripCahierCharge.pdf">Cahier des charges</a>
                         </li>
                         <li class="doc-item">
                             <img src="images/pdf-icon.png" alt="PDF" class="doc-icon">
-                            <a href="docs/guide-billeterie.pdf">Manuel utilisateur</a>
+                            <a href="images/RailTripCharteGraphique.pdf">Charte graphique</a>
                         </li>
                         <li class="doc-item">
                             <img src="images/pdf-icon.png" alt="PDF" class="doc-icon">
-                            <a href="docs/tech-billeterie.pdf">Documentation technique</a>
+                            <a href="images/RailTripCahierTechnique.pdf">Documentation technique</a>
                         </li>
                     </ul>
                 </div>
@@ -478,12 +495,12 @@
                     <h3>Captures d'écran</h3>
                     <div class="docuProjet">
                         <figure>
-                            <img class="imageProjet" src="images/Billeterie1.png" alt="Interface utilisateur">
+                            <img class="imageProjet" src="images/RailTrip1.png" alt="Interface utilisateur">
                             <figcaption>Interface utilisateur</figcaption>
                         </figure>
                         <figure>
-                            <img class="imageProjet" src="images/Billeterie2.png" alt="Extrait de code">
-                            <figcaption>Extrait de code Python</figcaption>
+                            <img class="imageProjet" src="images/RailTrip2.png" alt="Extrait de code">
+                            <figcaption>Extrait de code</figcaption>
                         </figure>
                     </div>
                 </div>
