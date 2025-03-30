@@ -134,6 +134,10 @@
     height: 300px;
 }
 
+.skill-section {
+    margin-bottom: 10vh; 
+}
+
 
 .skill-section p {
     display: flex;
