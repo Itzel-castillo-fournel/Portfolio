@@ -20,3 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Vérifier si nous sommes sur mobile
+    if(window.innerWidth <= 768) {
+        // Ajouter un gestionnaire d'événements pour chaque élément de timeline
+        document.querySelectorAll('.timeline').forEach(function(timeline) {
+            timeline.addEventListener('click', function() {
+                // Fermer toutes les timelines ouvertes
+                document.querySelectorAll('.timeline').forEach(function(t) {
+                    if(t !== timeline) {
+                        t.classList.remove('active');
+                    }
+                });
+                
+                // Basculer la classe 'active' pour cette timeline
+                this.classList.toggle('active');
+            });
+        });
+    }
+});

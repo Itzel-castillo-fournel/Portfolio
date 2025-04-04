@@ -1,5 +1,8 @@
 .filters {
-    margin: 20px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .filters button {
@@ -11,6 +14,7 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
+    font-size: 14px;
 }
 
 .filters button:hover {
@@ -21,46 +25,49 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px;
-    gap: 20px;
+    margin: 10px;
+    gap: 15px;
 }
 
 .vignette {
     position: relative;
-    width: 300px;
-    height: 400px; 
-    margin: 20px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 350px;
+    margin: 10px 0;
     overflow: hidden;
     border: 1px solid #333;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s;
-    background-color: #222; 
+    background-color: #222;
 }
 
 .vignette img {
     width: 100%;
-    height: 200px; 
-    object-fit: cover; /* Assure que l'image couvre l'espace défini */
+    height: 180px;
+    object-fit: cover;
 }
 
 .content {
-    padding: 15px;
-    background-color: #222; 
-    color: #fff; 
+    padding: 12px;
+    background-color: #222;
+    color: #fff;
 }
 
 .content h2 {
-    margin: 0 0 10px;
-    font-size: 1.3em;
+    margin: 0 0 8px;
+    font-size: 1.2em;
 }
 
 .content p {
     margin: 5px 0;
+    font-size: 0.9em;
 }
 
 .content .link {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 8px;
     color: #007bff;
     text-decoration: none;
 }
@@ -77,30 +84,92 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.3s;
 }
 
 .vignette .overlay p {
-    margin-bottom: 20px; 
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.9em;
 }
 
 .vignette .overlay .link {
-    margin-top: 0; 
+    margin-top: 0;
 }
 
-.vignette:hover {
-    transform: scale(1.05);
+/* Sur mobile, remplacer l'effet hover par un tap */
+@media (hover: hover) {
+    .vignette:hover {
+        transform: scale(1.05);
+    }
+
+    .vignette:hover .overlay {
+        opacity: 1;
+    }
 }
 
-.vignette:hover .overlay {
-    opacity: 1;
+/* Pour les appareils tactiles */
+@media (hover: none) {
+    .vignette:active {
+        transform: scale(1.02);
+    }
+    
+    .vignette .overlay {
+        opacity: 0.9;
+        background: rgba(0, 0, 0, 0.7);
+    }
 }
 
-#logo{
-    margin-right: 20px;
+#logo {
+    margin-right: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
-#outils{
-    margin-bottom: 10vh;
+#outils {
+    margin-bottom: 5vh;
+}
+
+/* Media queries pour différentes tailles d'écran */
+@media screen and (max-width: 768px) {
+    .container {
+        gap: 10px;
+        margin: 5px;
+    }
+    
+    .vignette {
+        margin: 5px 0;
+        min-height: 320px;
+    }
+    
+    .vignette img {
+        height: 150px;
+    }
+    
+    .content {
+        padding: 10px;
+    }
+    
+    .content h2 {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .filters button {
+        padding: 8px 15px;
+        font-size: 13px;
+        margin: 3px;
+    }
+    
+    .vignette {
+        max-width: 100%;
+    }
+    
+    #outils {
+        margin-bottom: 3vh;
+    }
 }

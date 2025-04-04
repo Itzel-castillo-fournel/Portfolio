@@ -1,22 +1,24 @@
-#logoOpera{
+#logoOpera {
     background-color: #fff;
     border-radius: 50%;
     padding: 5px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
-#opera{
-    font-size: 50px;
+#opera {
+    font-size: 30px;
 }
 
 .entrepise {
     width: 100%;
-    height: calc(100vh - 10vh); 
+    min-height: 100vh;
+    padding: 60px 0 70px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    margin-top: 0; 
+    align-items: center;
+    margin-top: 0;
     background-color: black;
 }
 
@@ -25,28 +27,30 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #pent {
-    background-color: #1a1a1a; 
-    border: 2px solid #efb810; 
+    background-color: #1a1a1a;
+    border: 2px solid #efb810;
     border-radius: 10px;
-    width: 70%;
-    padding: 10px;
+    width: 90%;
+    padding: 15px;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .content {
     display: flex;
+    flex-direction: column;
 }
 
 .left {
-    flex: 1;
-    padding-right: 20px;
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
 }
 
 .left ul {
@@ -56,84 +60,209 @@
 }
 
 .left li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .right {
-    flex: 1;
-    padding-left: 10px;
+    width: 100%;
+    padding-left: 0;
     text-align: center;
 }
 
 .right a {
     text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
 }
 
 .right a:hover {
     text-decoration: underline;
 }
 
-#titrestructure{
-    font-size: 35px;
+#titrestructure {
+    font-size: 24px;
     text-align: center;
     width: 100%;
+    margin: 10px 0;
 }
 
 .structure {
     width: 100%;
-    height: calc(100vh - 10vh); 
+    min-height: 100vh;
+    padding: 60px 0 70px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    margin-top: 0; 
+    align-items: center;
+    margin-top: 0;
     background-color: black;
 }
 
 #ensemble {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    max-width: 90%; 
-    height: calc(100vh - 20vh); 
+    justify-content: center;
+    width: 95%;
+    height: auto;
+    min-height: auto;
     margin: 10px auto;
 }
 
 .text-content {
-    margin-right: 20px; 
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .right img {
-    max-width: 100%; 
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 #RH {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    max-width: 90%; 
-    height: calc(100vh - 20vh); 
+    justify-content: center;
+    width: 95%;
+    height: auto;
+    min-height: auto;
     margin: 10px auto;
 }
 
 #SI img {
-    height: calc(100vh - 30vh);
+    height: auto;
+    max-height: 50vh;
     width: auto;
-    align-content: center;
+    max-width: 100%;
+    margin: 15px 0;
 }
 
-#SI{
-    margin-bottom: 40px;
+#SI {
+    margin-bottom: 30px;
+    width: 95%;
 }
 
-#moi ul { 
-    list-style-type: disc; /* disques pas tirets */ 
-    padding-left: 40px; 
-    line-height: 2; /* interligne */ 
+#moi ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.6;
     text-align: left;
-} 
+}
 
-#sirh{
-    margin-bottom: 10vh;
+#sirh {
+    margin-bottom: 60px;
+    width: 95%;
+}
+
+/* Media queries pour différentes tailles d'écran */
+@media screen and (min-width: 768px) {
+    #logoOpera {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #opera {
+        font-size: 50px;
+    }
+    
+    #pent {
+        width: 80%;
+    }
+    
+    .content {
+        flex-direction: row;
+    }
+    
+    .left {
+        flex: 1;
+        padding-right: 20px;
+        margin-bottom: 0;
+    }
+    
+    .right {
+        flex: 1;
+        padding-left: 10px;
+    }
+    
+    #titrestructure {
+        font-size: 35px;
+    }
+    
+    #ensemble {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 90%;
+        height: calc(100vh - 20vh);
+    }
+    
+    .text-content {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    
+    #RH {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 90%;
+        height: calc(100vh - 20vh);
+    }
+    
+    #SI img {
+        height: calc(100vh - 30vh);
+        max-height: none;
+    }
+    
+    #moi ul {
+        padding-left: 40px;
+        line-height: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #logoOpera {
+        width: 35px;
+        height: 35px;
+    }
+    
+    #opera {
+        font-size: 24px;
+    }
+    
+    #pent {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    #titrestructure {
+        font-size: 20px;
+    }
+    
+    .left li {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+    
+    #moi ul {
+        padding-left: 15px;
+        line-height: 1.5;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pour gérer le contenu fixe et éviter les problèmes de dépassement */
+@media screen and (max-height: 600px) and (max-width: 767px) {
+    .entrepise, .structure {
+        height: auto;
+        min-height: auto;
+        padding: 80px 0;
+    }
+    
+    #ensemble, #RH {
+        height: auto;
+    }
 }
 

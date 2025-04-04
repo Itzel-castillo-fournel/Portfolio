@@ -210,3 +210,135 @@
 .vignette-certifs:hover {
     transform: scale(1.05);
 }
+
+
+@media screen and (max-width: 768px) {
+    
+    .content {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .left, .right {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .left {
+        margin-top: 20px;
+        order: 1; 
+    }
+    
+    .right {
+        order: 2; 
+        margin-top: 50px;
+    }
+    
+    
+    .robot-container {
+        width: 90%;
+    }
+    
+    #mooc-container {
+        width: 30%;
+        height: 30%;
+    }
+    
+    .carousel-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+ 
+    .mytimeline {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .timeline {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .year {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .contentime {
+        width: 90%;
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        display: none;
+    }
+    
+   
+    .timeline.active .contentime {
+        display: block;
+    }
+    
+ 
+    .education-section {
+        height: auto;
+        width: 100%;
+    }
+    
+  
+    .skill-section p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .skill {
+        margin-bottom: 10px;
+    }
+    
+    .skill-logo {
+        width: 70px;
+        margin: 5px;
+    }
+    
+   
+    #certifs {
+        margin: 10px;
+        gap: 15px;
+    }
+    
+    .vignette-certifs {
+        width: 100%;
+    }
+    
+  
+    #contact img {
+        width: 30px;
+        margin: 0 5px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .left {
+        padding: 15px;
+    }
+    
+    #mooc-container {
+        width: 35%;
+        height: 35%;
+        top: 28%;
+        left: 40%;
+    }
+    
+    .carousel-img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .vignette-certifs .content-certifs h2 {
+        font-size: 1.1em;
+    }
+}
+
+
+

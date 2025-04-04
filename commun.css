@@ -1,134 +1,222 @@
 header {
-    position: fixed; /* Positionne le header par rapport à la fenêtre du navigateur */
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 10vh; 
-    background-color: black; 
-    overflow: hidden; 
-    display: flex; 
-    justify-content: flex-end; 
-    align-items: center; 
-    margin-bottom: 50px; 
-    z-index: 10; /* Assure que le header se trouve au-dessus des autres éléments */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    z-index: 10;
+    padding: 5px 0;
 }
 
 header a {
-    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); /* Applique un dégradé radial au texte */
-    -webkit-background-clip: text; /* Utilise le dégradé uniquement pour le texte */
-    -webkit-text-fill-color: transparent; /* Remplit le texte avec le dégradé */
-    padding: 14px 16px; 
-    text-decoration: none; 
-    font-size: 20px; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap;
 }
 
-
 header::after {
-    content: ''; /* Ajoute un contenu vide pour le pseudo-élément */
-    position: absolute; /* Positionne le pseudo-élément par rapport au header */
-    bottom: 0; /* Place le pseudo-élément en bas du header */
-    left: 0; 
-    width: 100%; /* Le pseudo-élément prend toute la largeur du header */
-    height: 2px; 
-    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); /* Ligne dorée sous le menu */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
 }
 
 body {
-    font-family: 'Arial', sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    background-color: #000; 
-    color: #fff; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    padding-top: 5%; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 60px;
 }
 
 body h1 {
-    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); 
-    -webkit-background-clip: text; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     text-align: center;
+    font-size: 1.8rem;
+    padding: 0 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 body h2 {
     background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     text-align: center;
+    font-size: 1.5rem;
+    padding: 0 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 body h3 {
-    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    text-align: center; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 section {
-    margin: 0; 
+    margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .full-page {
-    height: 90vh; 
+    min-height: 70vh;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    text-align: center; 
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
 }
-
-
-footer {
-    position: relative; /* Positionne par rapport à la fenêtre du navigateur */
-    width: 100%; 
-    background-color: black; 
-    overflow: hidden; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    z-index: 10; /* Assure que les éléments se trouvent au-dessus des autres */
-    margin-top: 50px;
-    bottom: 0px;
-}
-
 
 footer {
     position: fixed;
     bottom: 0;
-    height: 8vh;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    margin-top: 30px;
+    height: auto;
+    min-height: 40px;
+    padding: 5px 0;
 }
 
 footer a {
-    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); /* Applique un dégradé radial au texte */
-    -webkit-background-clip: text; /* Utilise le dégradé uniquement pour le texte */
-    -webkit-text-fill-color: transparent; /* Remplit le texte avec le dégradé */
-    padding: 14px 16px; 
-    text-decoration: none; 
-    font-size: 15px; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 13px;
 }
 
 footer p {
-    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    padding: 14px 16px; 
-    text-decoration: none; 
-    font-size: 15px; 
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 13px;
     margin-bottom: 0;
     margin-top: 0;
 }
 
 footer::before {
-    content: ''; /* Ajoute un contenu vide pour le pseudo-élément */
-    position: absolute; /* Positionne le pseudo-élément par rapport à l'élément principal */
-    top: 0; /* Place le pseudo-élément en haut du footer */
-    left: 0; 
-    width: 100%; /* Le pseudo-élément prend toute la largeur de l'élément principal */
-    height: 2px; 
-    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967); /* Ligne dorée sous ou au-dessus du menu */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: radial-gradient(circle, #AE8625, #F7EF8A, #D2AC47, #EDC967);
 }
 
+/* Media queries pour différentes tailles d'écran */
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+    header a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+    
+    .full-page {
+        min-height: 60vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-wrap: wrap;
+        padding: 5px 0;
+    }
+    
+    header a {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+    
+    body h1 {
+        font-size: 1.5rem;
+    }
+    
+    body h2 {
+        font-size: 1.3rem;
+    }
+    
+    body h3 {
+        font-size: 1.1rem;
+    }
+    
+    footer {
+        padding: 3px 0;
+    }
+    
+    footer a, footer p {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Pour assurer la compatibilité avec Safari et autres navigateurs */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    header a, body h1, body h2, body h3, footer a, footer p {
+        background-clip: text;
+        color: transparent;
+    }
+}
         
