@@ -2,28 +2,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Fonction pour afficher une popup en fonction de l'id
     window.showPopup = function(id) {
-    
         document.getElementById(id).style.display = 'block';
         document.querySelector('.overlay').style.display = 'block';
     }
 
     // Fonction pour cacher une popup en fonction de l'id (en cliquant sur la croix)
     window.hidePopup = function(id) {
-  
         document.getElementById(id).style.display = 'none';
         document.querySelector('.overlay').style.display = 'none';
     }
 
     // Fonction pour cacher toutes les popups en cliquant hors de la fiche projet
     window.hideAllPopups = function() {
-
         document.querySelectorAll('.popup').forEach(popup => popup.style.display = 'none');
         document.querySelector('.overlay').style.display = 'none';
     }
 
     // Fonction pour filtrer les projets selon une catégorie
     window.filterProjects = function(category) {
-
         // Sélectionne tous les éléments avec la classe 'vignette'
         const projects = document.querySelectorAll('.vignette');
         projects.forEach(project => {
@@ -40,7 +36,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
             }
         });
-
     }
 
     // Ouvre par défaut l'onglet "Tous"
@@ -48,21 +43,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Fonction pour vérifier si l'appareil est mobile (basé sur la largeur d'écran)
+    function isMobileDevice() {
+        return window.innerWidth <= 768; // 768px est généralement considéré comme une limite pour les appareils mobiles
+    }
+    
     // Sélectionne toutes les images avec la classe 'imageProjet'
     const images = document.querySelectorAll('.imageProjet');
+    
     // Crée un div pour l'overlay et l'ajoute au document
     const overlay = document.createElement('div');
     overlay.className = 'overlay-image';
     document.body.appendChild(overlay);
 
     images.forEach(image => {
-        image.addEventListener('click', function() {
+        image.addEventListener('click', function(event) {
+            // Vérifie si on est sur un appareil mobile
+            if (isMobileDevice()) {
+                // Sur mobile, ne rien faire
+                return;
+            }
+            
+            // Sur desktop, continuer avec la fonctionnalité d'agrandissement
             // Vérifie si l'image est déjà agrandie
             const isExpanded = image.classList.contains('expanded');
+            
             // Réduit toutes les autres images
             images.forEach(img => {
                 img.classList.remove('expanded');
             });
+            
             if (isExpanded) {
                 // Si l'image est déjà agrandie, la réduit
                 image.classList.remove('expanded');
@@ -79,5 +89,14 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', function() {
         images.forEach(img => img.classList.remove('expanded'));
         overlay.style.display = 'none';
+    });
+    
+    // Gérer le redimensionnement de la fenêtre
+    window.addEventListener('resize', function() {
+        // Si on est sur mobile, s'assurer qu'aucune image n'est agrandie
+        if (isMobileDevice()) {
+            images.forEach(img => img.classList.remove('expanded'));
+            overlay.style.display = 'none';
+        }
     });
 });

@@ -1,3 +1,15 @@
+/* Empêcher le défilement horizontal sur toute la page */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* S'assurer que tous les éléments respectent les limites de la page */
+#pent, .content, .right, .left {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 #logoOpera {
     background-color: #fff;
     border-radius: 50%;
@@ -153,6 +165,14 @@
     text-align: left;
 }
 
+.right iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
 #sirh {
     margin-bottom: 60px;
     width: 95%;
@@ -220,6 +240,10 @@
         padding-left: 40px;
         line-height: 2;
     }
+
+    .right iframe {
+        height: 450px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -251,9 +275,14 @@
         line-height: 1.5;
         font-size: 0.9rem;
     }
+
+    .right iframe {
+        height: 250px;
+    }
+    
 }
 
-/* Pour gérer le contenu fixe et éviter les problèmes de dépassement */
+
 @media screen and (max-height: 600px) and (max-width: 767px) {
     .entrepise, .structure {
         height: auto;
@@ -265,4 +294,31 @@
         height: auto;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    #entreprise {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #opera {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    #pent {
+        order: 2;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
