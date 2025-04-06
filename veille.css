@@ -88,6 +88,7 @@
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.3s;
+    pointer-events: none; /* Important pour que les clics passent à travers par défaut */
 }
 
 .vignette .overlay p {
@@ -100,7 +101,7 @@
     margin-top: 0;
 }
 
-/* Sur mobile, remplacer l'effet hover par un tap */
+/* Sur desktop avec souris, garder l'effet hover */
 @media (hover: hover) {
     .vignette:hover {
         transform: scale(1.05);
@@ -108,18 +109,31 @@
 
     .vignette:hover .overlay {
         opacity: 1;
+        pointer-events: auto; /* Permettre l'interaction avec l'overlay */
     }
 }
 
 /* Pour les appareils tactiles */
 @media (hover: none) {
+    .vignette {
+        cursor: pointer;
+    }
+    
     .vignette:active {
         transform: scale(1.02);
     }
     
+    /* Par défaut, l'overlay est invisible */
     .vignette .overlay {
-        opacity: 0.9;
-        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.85);
+        pointer-events: none;
+    }
+    
+    /* Quand l'overlay est actif (après un clic) */
+    .vignette .overlay.active {
+        opacity: 1;
+        pointer-events: auto; /* Permettre l'interaction avec l'overlay */
     }
 }
 
