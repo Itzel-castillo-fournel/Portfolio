@@ -3,7 +3,8 @@
     <head>
         <title>Portfolio</title>
         <link rel="stylesheet" href="commun.css" />   
-        <link rel="stylesheet" href="entreprise.css" />   <!--Compléter-->
+        <link rel="stylesheet" href="entreprise.css" />   
+        <script src="password.js"></script>
         <script src=""></script>
         <script src=""></script>
         <meta charset="utf-8">
@@ -98,7 +99,16 @@
     <section id="sirh">
         <div id="SI">
             <h2>SIRH de l'Opéra</h2><br>
-            <img src="Images/SI.png" alt="Image du SI de l'entreprise">
+            
+            <!-- Formulaire de mot de passe -->
+            <div id="password-form">
+                <p>Cette image est protégée. Veuillez entrer le mot de passe pour y accéder :</p>
+                <input type="password" id="password-input" placeholder="Entrez le mot de passe">
+                <button onclick="checkPassword()">Accéder</button>
+            </div>
+            
+            <!-- Image protégée (masquée par défaut) -->
+            <img id="protected-image" style="display: none;" alt="Image du SI de l'entreprise">
         </div>
 
         <div id="moi">

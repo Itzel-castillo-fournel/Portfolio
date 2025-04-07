@@ -145,17 +145,13 @@ html, body {
     margin: 10px auto;
 }
 
-#SI img {
-    height: auto;
-    max-height: 50vh;
-    width: auto;
-    max-width: 100%;
-    margin: 15px 0;
-}
-
 #SI {
     margin-bottom: 30px;
     width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
 }
 
 #moi ul {
@@ -177,6 +173,49 @@ html, body {
     margin-bottom: 60px;
     width: 95%;
 }
+
+#password-form {
+    background-color: #1a1a1a;
+    border: 2px solid #efb810;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#password-input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+}
+
+#password-form button {
+    background-color: #efb810;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#password-form button:hover {
+    background-color: #d9a50d;
+}
+
+#protected-image {
+    height: auto;
+    max-height: 50vh;
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    margin: 25px auto;
+}
+
 
 /* Media queries pour différentes tailles d'écran */
 @media screen and (min-width: 768px) {
@@ -243,6 +282,12 @@ html, body {
 
     .right iframe {
         height: 450px;
+    }
+
+    #protected-image {
+        height: calc(100vh - 30vh);
+        max-height: none;
+        margin: 25px auto;
     }
 }
 
