@@ -1,9 +1,122 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
+    <head>
+        <title>Portfolio - Engagement Étudiant</title>
+        <link rel="stylesheet" href="commun.css" />   
+        <link rel="stylesheet" href="engagement.css" />   
+        <script src="password.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
 
-</body>
+    <body>
+        <header id="menu">
+            <a href="index.html">Accueil</a>
+            <a href="entreprise.html">Entreprise</a>
+            <a href="projet.html">Projets</a>
+            <a href="veille.html">Veille</a>
+            <a href="bilan.html">Bilan</a>
+            <a href="engagement.html">Engagement</a>
+        </header>
+    
+        <section id="engagement" class="full-page">
+            <h1>Mon Engagement Bénévole</h1>
+
+            <div id="pent">
+                <div class="content">
+                    <div class="left">
+                        <!-- Logo au-dessus du titre -->
+                        <div class="logo" style="display: flex; justify-content: center; margin-bottom: 15px;">
+                            <img id="logoCroixRouge" src="Images/CRlogo.jpg" alt="Logo Croix Rouge" style="background-color: #fff; border-radius: 50%; padding: 5px; width: 40px; height: 40px;">
+                        </div>
+                        <h3>La Croix Rouge Française</h3>
+                        <p>Organisation humanitaire internationale fondée en 1863 par Henry Dunant et Gustave Moynier.</p>
+                        <p>Sa mission principale est de protéger la vie et la dignité des personnes en situation de crise.</p>
+                        <p>Elle repose sur sept principes fondamentaux : humanité, impartialité, neutralité, indépendance, volontariat, unité et universalité.</p>
+                        <!-- Lien vers le site déplacé ici -->
+                        <p><a href="https://www.croix-rouge.fr/">Visitez le site officiel</a></p>
+                    </div>
+
+                    <div class="right">
+                        <img src="Images/CRaction.jpg" alt="Action de la Croix Rouge">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h1>Mon expérience de secouriste</h1>
+            
+            <!-- Formulaire de mot de passe -->
+            <div id="password-form">
+                <p>Cette section est protégée. Veuillez entrer le mot de passe pour y accéder :</p>
+                <input type="password" id="password-input" placeholder="Entrez le mot de passe">
+                <button onclick="checkPasswordEngagement()">Accéder</button>
+            </div>
+            
+            <!-- Contenu protégé (masqué par défaut) -->
+            <div id="protected-content" style="display: none;">
+                <div id="ensemble">
+                    <div class="left">
+                        <h2>Contexte de l'engagement</h2>
+                        <p>Mon engagement bénévole a débuté en 2017 et se poursuit jusqu'à aujourd'hui.</p>
+                        <p>J'y consacre environ 5 heures par mois, avec une activité plus intense au printemps et en été.</p>
+                        <p>J'ai été attiré par les valeurs fondamentales de la Croix Rouge : humanité, solidarité et impartialité.</p>
+                    </div>
+                    <div class="right">
+                        <img src="Images/CRsecours.jpg" alt="Secouriste en action">
+                    </div>
+                </div>
+
+                <div id="missions-section">
+                    <h2>Description de la mission</h2>
+                    <div class="content">
+                        <div class="left">
+                            <ul>
+                                <li>Participation aux dispositifs préventifs de secours (DPS) lors d'événements sportifs, culturels et festifs</li>
+                                <li>Intervention pour prodiguer les premiers soins en attendant un avis médical du Samu</li>
+                                <li>Évacuation des victimes vers l'hôpital si nécessaire</li>
+                                <li>Obtention des certifications PSE1 et PSE2 (Premiers Secours en Équipe de niveau 1 et 2)</li>
+                                <li>Participation aux Jeux Olympiques en tant que secouriste</li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <img src="Images/diplome-secouriste.jpg" alt="Diplôme Secouriste">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="competences-section">
+                    <h2>Compétences développées</h2>
+                    <ul>
+                        <li>Travail d'équipe et communication efficace dans des situations stressantes</li>
+                        <li>Gestion du stress et capacité à rester calme sous pression</li>
+                        <li>Interaction avec les victimes et leurs proches avec compassion et professionnalisme</li>
+                        <li>Organisation et rigueur dans le respect des protocoles et la gestion du matériel</li>
+                        <li>Adaptabilité face à des situations imprévues et variées</li>
+                    </ul>
+                </div>
+
+                <div id="lien-bts">
+                    <h2>Lien avec le BTS SIO SLAM</h2>
+                    <p>L'expérience vécue au sein de la Croix Rouge a enrichi mon parcours en BTS SIO de plusieurs façons :</p>
+                    <ul>
+                        <li>Les compétences en organisation et coordination d'équipes se transposent à la gestion de projets informatiques</li>
+                        <li>L'analyse rapide des situations et la recherche de solutions sont essentielles en développement logiciel</li>
+                        <li>Les défis rencontrés m'ont préparé à persévérer dans l'apprentissage des technologies et langages informatiques</li>
+                    </ul>
+                </div>
+
+                <div id="conclusion">
+                    <h2>Réflexion personnelle et conclusion</h2>
+                    <p>Cet engagement m'a transformé sur le plan personnel en m'apprenant la valeur de l'entraide et le rôle que chacun peut jouer dans la société. Sur le plan professionnel, il m'a permis de développer des compétences transférables dans le domaine informatique, notamment en gestion de projet et en résolution de problèmes.</p>
+                    <p>Je souhaite encourager chacun à envisager un engagement bénévole. C'est une expérience enrichissante qui permet de se dépasser tout en contribuant au bien-être des autres.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© Itzel Castillo Fournel, tout droit réservé</p>
+            <a href="mentions.html">Mentions Légales</a>
+        </footer>
+    </body>
 </html>
