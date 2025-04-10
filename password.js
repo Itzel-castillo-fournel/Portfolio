@@ -15,7 +15,6 @@ async function digestMessage(message) {
         const hashBuffer = await crypto.subtle.digest(_0x18f3[0], msgBuffer);
         const hashArray = Array.from(new Uint8Array(hashBuffer));
         const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-        console.log(hashHex);
         return hashHex;
     } catch (error) {
         console.error('Erreur de hachage:', error);
