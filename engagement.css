@@ -1,201 +1,336 @@
-#engagement, #experience {
+/* Variables de couleurs et de style */
+:root {
+    --primary-color: #efb810;
+    --secondary-color: #e63946;
+    --bg-dark: #0a0a0a;
+    --bg-section: #1a1a1a;
+    --text-color: #ffffff;
+    --border-radius: 10px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    --transition: all 0.3s ease;
+  }
+  
+  /* Réinitialisation et styles de base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Sections principales */
+  #engagement, #experience {
     width: 100%;
-    height: calc(100vh - 3);
+    min-height: 100vh;
     padding: 60px 0 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
-    background-color: black;
-}
-
-#engagement {
-    height: calc(100vh - 30vh);
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+  }
+  
+  #engagement {
+    min-height: 70vh;
     padding-top: 0;
-}
-
-#logoCroixRouge {
+  }
+  
+  /* Logo Croix Rouge */
+  #logoCroixRouge {
     background-color: #fff;
     border-radius: 50%;
     padding: 5px;
-    width: 40px;
-    height: 40px;
-}
-
-#missions-section, 
-#competences-section, 
-#lien-bts, 
-#conclusion {
-    background-color: #1a1a1a;
-    border: 2px solid #efb810;
-    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    transition: var(--transition);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Sections de contenu */
+  #missions-section,
+  #competences-section,
+  #lien-bts,
+  #conclusion,
+  #pent,
+  #ensemble {
+    background-color: var(--bg-section);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
     width: 90%;
-    padding: 15px;
-    box-sizing: border-box;
-    margin: 15px auto;
-}
-
-#competences-section ul, 
-#lien-bts ul {
+    max-width: 1200px;
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) auto;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  #pent:hover,
+  #ensemble:hover,
+  #missions-section:hover,
+  #competences-section:hover,
+  #lien-bts:hover,
+  #conclusion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Titres */
+  h1 {
+    font-size: 2.5rem;
+    margin: var(--spacing-lg) 0;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+    padding-bottom: 8px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+  }
+  
+  /* Listes */
+  #competences-section ul,
+  #lien-bts ul,
+  .left ul {
     list-style-type: disc;
-    padding-left: 20px;
-    line-height: 1.6;
+    padding-left: 25px;
+    line-height: 1.8;
     text-align: left;
-}
-
-#protected-content {
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  
+  /* Structure du contenu */
+  #protected-content {
     width: 100%;
-}
-
-#pent, #ensemble {
-    width: 90%;
-    margin: 20px auto;
+    transition: var(--transition);
+  }
+  
+  .content, .left, .right {
+    width: 100%;
+    margin: var(--spacing-sm) 0;
+  }
+  
+  /* Modification pour le premier bloc (logo Croix Rouge) */
+  #pent .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  /* Ajout de l'alignement vertical pour le texte */
+  #pent .left, #pent .right {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.content, .left, .right {
-    width: 100%;
-    margin: 10px 0;
-}
-
-.right img {
+    justify-content: center;
+  }
+  
+  #pent .left .logo {
+    align-self: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+    #pent .content {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    
+    /* Pour les écrans moyens et grands, échange l'ordre des éléments */
+    #pent .left {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    #pent .right {
+      order: 1;
+    }
+  }
+  
+  /* Images */
+  .right img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
-}
-
-.left li {
-    text-align: left;
-}
-
-
-
-@media screen and (min-width: 768px) {
-
-    #logoCroixRouge {
-        width: 50px;
-        height: 50px;
-    }
-    
-    #missions-section, 
-    #competences-section, 
-    #lien-bts, 
-    #conclusion {
-        width: 80%;
-    }
-    
-    #competences-section ul, 
-    #lien-bts ul {
-        padding-left: 40px;
-        line-height: 2;
-    }
-    
-    #pent, #ensemble {
-        width: 80%;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .content {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .left, .right {
-        width: 48%;
-    }
-
-    .left li {
-        text-align: left;
-    }
-    
-    #missions-section .content {
-        align-items: center;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    
-    #missions-section, 
-    #competences-section, 
-    #lien-bts, 
-    #conclusion {
-        width: 75%;
-        padding: 25px;
-    }
-    
-    #pent, #ensemble {
-        width: 75%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-
-    #logoCroixRouge {
-        width: 35px;
-        height: 35px;
-        margin-top: 20px;
-    }
-    
-    #missions-section, 
-    #competences-section, 
-    #lien-bts, 
-    #conclusion {
-        width: 95%;
-        padding: 10px;
-    }
-    
-    #competences-section ul, 
-    #lien-bts ul {
-        padding-left: 15px;
-        line-height: 1.5;
-        font-size: 0.9rem;
-    }
-    
-    h1 {
-        font-size: 1.5rem;
-    }
-    
-    h2 {
-        font-size: 1.3rem;
-    }
-}
-
-
-#password-form {
-    background-color: #1a1a1a;
-    border: 2px solid #efb810;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+  }
+  
+  .right img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Liens */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+  
+  /* Formulaire de mot de passe */
+  #password-form {
+    background-color: var(--bg-section);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
     text-align: center;
     width: 90%;
     max-width: 500px;
-}
-
-#password-input {
-    padding: 8px;
-    margin: 10px;
-    border: 1px solid #efb810;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  #password-input {
+    padding: 12px;
+    margin: 15px 0;
+    width: 80%;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     background-color: #333;
     color: white;
-}
-
-button {
-    background-color: #efb810;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: var(--primary-color);
     color: black;
     border: none;
     border-radius: 5px;
-    padding: 8px 15px;
+    padding: 12px 20px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-button:hover {
+    transition: var(--transition);
+    font-size: 1rem;
+  }
+  
+  button:hover {
     background-color: #ffd54f;
-}
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Paragraphes */
+  p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive design */
+  @media screen and (min-width: 768px) {
+    /* Layout pour tablettes et + */
+    #pent, #ensemble, #missions-section .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .left, .right {
+      width: 48%;
+    }
+    
+    #missions-section,
+    #competences-section,
+    #lien-bts,
+    #conclusion {
+      width: 85%;
+      padding: var(--spacing-md);
+    }
+    
+    #competences-section ul,
+    #lien-bts ul {
+      padding-left: 30px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* Layout pour desktop */
+    #missions-section,
+    #competences-section,
+    #lien-bts,
+    #conclusion,
+    #pent,
+    #ensemble {
+      width: 80%;
+      padding: 30px;
+    }
+    
+    h1 {
+      font-size: 3rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    p, li {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Layout pour mobile */
+    #logoCroixRouge {
+      width: 40px;
+      height: 40px;
+      margin-top: var(--spacing-lg);
+    }
+    
+    #missions-section,
+    #competences-section,
+    #lien-bts,
+    #conclusion {
+      width: 95%;
+      padding: 15px;
+    }
+    
+    h1 {
+      font-size: 1.8rem;
+      margin: var(--spacing-md) 0;
+    }
+    
+    h2 {
+      font-size: 1.4rem;
+    }
+    
+    h3 {
+      font-size: 1.2rem;
+    }
+    
+    p, li {
+      font-size: 0.95rem;
+    }
+    
+    #password-input, button {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
+  /* Animation pour l'apparition du contenu protégé */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #protected-content.visible {
+    display: block !important;
+    animation: fadeIn 0.8s ease-in-out;
+  }
